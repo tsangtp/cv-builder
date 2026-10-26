@@ -1,5 +1,7 @@
 # cv-builder
 
+[![build](https://github.com/tsangtp/cv-builder/actions/workflows/build.yml/badge.svg)](https://github.com/tsangtp/cv-builder/actions/workflows/build.yml)
+
 **One JSON in, two print-ready PDFs out** — a designed version and an ATS-safe version rendered from the same data.
 
 | Designed (`modern`) | ATS-safe (`ats`) |
