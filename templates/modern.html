@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ meta.name }} — CV</title>
+<style>{{ css | safe }}</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="side">
+    <div class="name">{{ meta.name }}</div>
+    <div class="role">{{ meta.title }}</div>
+
+    <div class="rule"></div>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact">
+        <div><span class="k">Phone</span>{{ meta.phone }}</div>
+        <div><span class="k">Email</span>{{ meta.email }}</div>
+        <div><span class="k">Base</span>{{ meta.location }}</div>
+        {% for link in meta.links %}
+        <div class="lk">
+          <span class="k">{{ link.label }}</span>
+          <a href="{{ link.url }}">{{ link.text }}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      {% for skill in skills %}
+      <div class="skill">
+        <span class="lab">{{ skill.group }}</span>
+        <span class="val">{{ skill.entries }}</span>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      {% for edu in education %}
+      <div class="edu-item">
+        <div class="d">{{ edu.school }}</div>
+        <div class="s">{{ edu.degree }}</div>
+        <div class="y">{{ edu.start }} – {{ edu.end }}</div>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      {% for cert in certifications %}
+      <div class="cert">{{ cert.name }}<br><span class="y">{{ cert.issuer }} · {{ cert.year }}</span></div>
+      {% endfor %}
+    </section>
+
+    {% if languages %}
+    <section>
+      <h2>Languages</h2>
+      <div class="lang">{{ languages }}</div>
+    </section>
+    {% endif %}
+  </aside>
+
+  <main class="main">
+
+    <section>
+      <h2>Profile</h2>
+      <p class="profile">{{ summary }}</p>
+      {% if highlights %}
+      <div class="hl">
+        {% for h in highlights %}
+        <div><b>{{ h.value }}</b>{{ h.label }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      {% for job in experience %}
+      <div class="job">
+        <div class="job-head">
+          <span class="co">{{ job.company }}</span>
+          <span class="dt">{{ job.start }} – {{ job.end }}</span>
+        </div>
+        <div class="job-sub">
+          <span class="ti">{{ job.role }}</span>
+          {% if job.stack %}<span class="stk">{{ job.stack }}</span>{% endif %}
+        </div>
+        <ul>
+          {% for b in job.bullets %}
+          <li><b>{{ b.lead }}</b> {{ b.body }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

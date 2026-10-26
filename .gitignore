@@ -1,0 +1,18 @@
+# build output
+dist/
+.tmp-preview/
+
+# your real resume — never commit this
+data/resume.json
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# editors / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

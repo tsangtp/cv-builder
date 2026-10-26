@@ -1,0 +1,34 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # GitHub's Ubuntu runners ship Google Chrome, which build.py picks up
+      # automatically. data/resume.json is gitignored, so CI builds the sample.
+      - name: Build PDFs
+        run: python build.py --data data/example.json --out dist
+
+      - name: Verify output
+        run: python check.py dist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdfs
+          path: dist/*.pdf
+          if-no-files-found: error

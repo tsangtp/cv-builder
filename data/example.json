@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "name": "Jane Doe",
+    "title": "Full-Stack Developer",
+    "tagline": "Full-Stack Developer | Backend & Cross-Platform Applications",
+    "location": "Hong Kong",
+    "phone": "+852 0000 0000",
+    "email": "jane.doe@example.com",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "text": "linkedin.com/in/jane-doe",
+        "url": "https://www.linkedin.com/in/jane-doe"
+      },
+      {
+        "label": "GitHub",
+        "text": "github.com/janedoe",
+        "url": "https://github.com/janedoe"
+      }
+    ]
+  },
+  "summary": "Full-stack developer with enterprise experience across telecommunications, F&B and insurance. Ships features end to end — data model, backend services and UI — and automates the manual work around them: a cross-platform app now serving 1,000+ employees, and Python tooling that replaced manual defect triage.",
+  "highlights": [
+    {
+      "value": "1,000+",
+      "label": "employees served by the app I built"
+    },
+    {
+      "value": "3",
+      "label": "industries: telecom, F&B, insurance"
+    },
+    {
+      "value": "Full stack",
+      "label": "schema → API → UI ownership"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Languages",
+      "entries": "Python, JavaScript, Java, C#, C++, PHP, SQL"
+    },
+    {
+      "group": "Backend",
+      "entries": "Node.js, .NET, MVC architecture, REST APIs, OOP design"
+    },
+    {
+      "group": "Frontend & Mobile",
+      "entries": "HTML, CSS, jQuery, cross-platform app development"
+    },
+    {
+      "group": "Databases",
+      "entries": "MySQL, PostgreSQL — schema design & query optimisation"
+    },
+    {
+      "group": "Data & Analytics",
+      "entries": "SQL querying, ETL & data cleaning, reporting, usage trend analysis"
+    },
+    {
+      "group": "Engineering Practice",
+      "entries": "SDLC, automated & regression testing, log analysis, code audit, incident response"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Acme Telecom",
+      "role": "IT Officer",
+      "start": "Aug 2024",
+      "end": "Present",
+      "stack": "Python · SQL · cross-platform · automation",
+      "bullets": [
+        {
+          "lead": "Shipped a cross-platform app",
+          "body": "from zero to production, centralising resources for 1,000+ employees; owned data model, backend services and UI."
+        },
+        {
+          "lead": "Added data analytics in SQL and Python",
+          "body": "— cleaned and joined data from 5 sources into recurring reports, ad-hoc answers and usage/error trends."
+        },
+        {
+          "lead": "Automated defect triage",
+          "body": "in Python — log-parsing tools that flag defects without manual review, cutting investigation from 2 hours to 15 minutes."
+        },
+        {
+          "lead": "Kept 12 production systems available",
+          "body": "through full-lifecycle upgrades, regression testing and incident resolution; sustained 99.9% uptime."
+        },
+        {
+          "lead": "Translated requirements into backend changes",
+          "body": "working directly with project managers and business stakeholders."
+        }
+      ]
+    },
+    {
+      "company": "Example F&B Group",
+      "role": "Assistant Application Support",
+      "start": "Jul 2023",
+      "end": "Nov 2023",
+      "stack": "log analysis · root-cause · solution design",
+      "bullets": [
+        {
+          "lead": "Specified solutions from user workflows",
+          "body": "improving internal application performance and daily operations."
+        },
+        {
+          "lead": "Ran root-cause analysis on high-volume logs",
+          "body": "fixing bugs before they disrupted service."
+        }
+      ]
+    },
+    {
+      "company": "Example Insurance Limited",
+      "role": "Programmer",
+      "start": "Apr 2022",
+      "end": "Jul 2022",
+      "stack": "backend · legacy audit · code quality",
+      "bullets": [
+        {
+          "lead": "Maintained core backend logic",
+          "body": "for enterprise insurance systems, keeping data processing accurate and systems stable."
+        },
+        {
+          "lead": "Audited a legacy codebase",
+          "body": "with data-analysis scripts, surfacing bottlenecks and enforcing coding standards."
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Example University",
+      "degree": "Bachelor of Computer Science",
+      "start": "2017",
+      "end": "2019"
+    },
+    {
+      "school": "Example Institute of Vocational Education",
+      "degree": "Higher Diploma in Software Engineering",
+      "start": "2016",
+      "end": "2017"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "SQL for Data Science",
+      "issuer": "IBM",
+      "year": "2023"
+    },
+    {
+      "name": "Computer Science and Programming Using Python",
+      "issuer": "MIT",
+      "year": "2021"
+    }
+  ],
+  "languages": "Cantonese · English · Mandarin"
+}

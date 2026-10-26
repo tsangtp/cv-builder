@@ -1,0 +1,47 @@
+@page { size: A4; margin: 10mm 14mm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 9.3pt; line-height: 1.44; color: #1a1a1a;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+
+.name { font-size: 17.5pt; font-weight: 700; letter-spacing: .5px; color: #111; }
+.title { font-size: 9.4pt; font-weight: 600; color: #333; margin-top: .9mm; letter-spacing: .4px; }
+.contact { font-size: 8.8pt; color: #333; margin-top: 1.2mm; }
+
+h2 {
+  font-size: 10pt; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
+  color: #111; margin: 3.1mm 0 1.4mm; padding-bottom: .8mm;
+  border-bottom: 1px solid #999;
+}
+
+p.summary { font-size: 9.3pt; line-height: 1.46; }
+
+.job { margin-bottom: 3.5mm; }
+.job:last-child { margin-bottom: 0; }
+.row { display: flex; justify-content: space-between; align-items: baseline; }
+.co { font-size: 10pt; font-weight: 700; color: #111; }
+.dt { font-size: 8.9pt; color: #333; white-space: nowrap; }
+.ti { font-size: 9.6pt; font-weight: 600; font-style: italic; color: #222; margin-top: .2mm; }
+
+ul { list-style: none; margin-top: 1mm; }
+li {
+  font-size: 9.4pt; line-height: 1.44;
+  padding-left: 4.2mm; position: relative; margin-bottom: 1mm;
+}
+li:last-child { margin-bottom: 0; }
+li::before { content: "•"; position: absolute; left: .8mm; top: 0; color: #333; }
+li b { color: #111; }
+
+.skillrow { font-size: 9.1pt; line-height: 1.44; margin-bottom: .5mm; }
+
+.edu { margin-bottom: 1.3mm; }
+.edu:last-child { margin-bottom: 0; }
+.edu .d { font-size: 9.7pt; font-weight: 700; color: #111; }
+.edu .s { font-size: 9.4pt; color: #222; }
+
+.cert { font-size: 9.1pt; line-height: 1.42; margin-bottom: .5mm; }
+
+a { color: #1a1a1a; text-decoration: none; }

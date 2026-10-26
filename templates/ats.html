@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ meta.name }} — CV (ATS)</title>
+<style>{{ css | safe }}</style>
+</head>
+<body>
+
+  <div class="name">{{ meta.name }}</div>
+  <div class="title">{{ meta.tagline }}</div>
+  <div class="contact">
+    {{ meta.location }} &nbsp;|&nbsp; {{ meta.phone }} &nbsp;|&nbsp; {{ meta.email }}
+    {% if meta.links %}<br>
+    {% for link in meta.links %}{{ link.label }}: <a href="{{ link.url }}">{{ link.text }}</a>{% if not loop.last %} &nbsp;|&nbsp; {% endif %}{% endfor %}
+    {% endif %}
+  </div>
+
+  <h2>Professional Summary</h2>
+  <p class="summary">{{ summary }}</p>
+
+  <h2>Technical Skills</h2>
+  {% for skill in skills %}
+  <div class="skillrow"><b>{{ skill.group }}:</b> {{ skill.entries }}</div>
+  {% endfor %}
+
+  <h2>Professional Experience</h2>
+  {% for job in experience %}
+  <div class="job">
+    <div class="row">
+      <span class="co">{{ job.company }}</span>
+      <span class="dt">{{ job.start }} – {{ job.end }}</span>
+    </div>
+    <div class="ti">{{ job.role }}</div>
+    <ul>
+      {% for b in job.bullets %}
+      <li><b>{{ b.lead }}</b> {{ b.body }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+
+  <h2>Education</h2>
+  {% for edu in education %}
+  <div class="edu">
+    <div class="row">
+      <span class="d">{{ edu.school }}</span>
+      <span class="dt">{{ edu.start }} – {{ edu.end }}</span>
+    </div>
+    <div class="s">{{ edu.degree }}</div>
+  </div>
+  {% endfor %}
+
+  <h2>Certifications &amp; Languages</h2>
+  {% for cert in certifications %}
+  <div class="cert">{{ cert.name }} — {{ cert.issuer }} ({{ cert.year }})</div>
+  {% endfor %}
+  {% if languages %}
+  <div class="cert">Languages: {{ languages }}</div>
+  {% endif %}
+
+</body>
+</html>
